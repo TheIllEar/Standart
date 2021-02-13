@@ -1,5 +1,7 @@
 /node_modules
 /gulpfile.js
+/gulpfileVLADA.js
 /package-lock.json
 /package.json
-/scss
+/DS_Store
+/.DS_Store
