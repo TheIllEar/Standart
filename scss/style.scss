@@ -5,8 +5,6 @@
   list-style: none;
 }
 
-
-
 @font-face {
   font-family: 'PreferredName';
   src: url(../fonts/PreferredName.ttf);
@@ -31,15 +29,12 @@ ul, li {
   padding: 0;
 }
 
-
-
 a:focus,
 button:focus {
   outline: none;
 }
 
 ////////////////////////////////////////////////////////////////////////////
-
 //При тупняке с flex элементами/////////////
 // на родителя:
 //     transform-style: preserve-3d;
