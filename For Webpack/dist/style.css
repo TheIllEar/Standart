@@ -348,57 +348,7 @@ template {
   display: none;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-}
 
-@font-face {
-  font-family: 'PreferredName';
-  src: url(../fonts/PreferredName.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'PreferredName';
-  src: url(../fonts/PreferredName.ttf);
-  font-weight: 500;
-  font-style: normal;
-}
 
-body {
-  font-family: 'PreferredName', 'Roboto', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
-ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-a:focus,
-button:focus {
-  outline: none;
-}
-
-////////////////////////////////////////////////////////////////////////////
-//При тупняке с flex элементами/////////////
-//transform-style: preserve-3d; на родителя
-//transform: translateZ(-1px); на сам блок
-
-///////////////////////////////////////////////////////////////////////////
-//Для задаия глубины анимации/////////////
-// perspective: 2000px; на родителя
-
-// transition: 0.2s; на элемент, который должен появиться с аниммацией
-// transform-origin: center -100px; на элемент, который должен появиться с аниммацией
-// transform: rotateX(-25deg); на элемент, который должен появиться с аниммацией
-// opacity: 0; на элемент, который должен появиться с аниммацией
-// visibility: hidden; на элемент, который должен появиться с аниммацией
-
-// transform: rotateX(0); на элемент, который появился
-// opacity: 1; на элемент, который появился
-// visibility: visible; на элемент, который появился
+/*# sourceMappingURL=style.css.map*/
