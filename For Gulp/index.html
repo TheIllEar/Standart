@@ -13,37 +13,71 @@
     <meta name="google" content="nositelinkssearchbox"><!-- Позволяет указать Google не предлагать перевести эту страницу -->
     <meta name="generator" content="program"><!-- Короткое описание тематики вашего сайта -->
     <meta name="subject" content="тематика вашего сайта"><!-- open graph Facebook-->
-
-    <link rel="icon" type="image/png" href="img/favicon/favicon192.png" sizes="192x192" data-mce-href="img/favicon/favicon192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/favicon180.png" data-mce-href="img/favicon/favicon180.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/favicon152.png" data-mce-href="img/favicon/favicon152.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/favicon144.png" data-mce-href="img/favicon/favicon144.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/favicon120.png" data-mce-href="img/favicon/favicon120.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/favicon114.png" data-mce-href="img/favicon/favicon114.png">
-    <link rel="icon" type="image/png" href="img/favicon/favicon96.png" sizes="96x96" data-mce-href="img/favicon/favicon96.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/favicon76.png" data-mce-href="img/favicon/favicon76.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/favicon72.png" data-mce-href="img/favicon/favicon72.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/favicon60.png" data-mce-href="img/favicon/favicon60.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/favicon57.png" data-mce-href="img/favicon/favicon57.png">
-    <link rel="icon" type="image/png" href="img/favicon/favicon32.png" sizes="32x32" data-mce-href="img/favicon/favicon32.png">
-    <link rel="icon" type="image/png" href="img/favicon/favicon16.png" sizes="16x16" data-mce-href="img/favicon/favicon16.png">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Стили и шрифты -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://kit.fontawesome.com/e637e069f2.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header class="header">
-      <div class="header-container container-fluid">
-        <nav class="header-nav">
-          <ul class="header-list">
-            <li class="header-list__item"><a href="#dino" class="header-list__link">Dino</a></li>
-            <li class="header-list__item"><a href="#DropDownMenu" class="header-list__link">DropDown Menu</a></li>
-            <li class="header-list__item"><a href="" class="header-list__link"></a></li>
-          </ul>
-        </nav>
+    <!-- SideMobileMenu -->
+    <nav class="header__nav nav-bar">
+      <div class="toggle-menu">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
       </div>
-    </header>
+      <ul class="nav-list">
+        <li class="nav-list-item"><a href="" class="nav-link">Home</a></li>
+        <li class="nav-list-item"><a href="" class="nav-link">About</a></li>
+        <li class="nav-list-item"><a href="" class="nav-link">Portfolio</a></li>
+        <li class="nav-list-item"><a href="" class="nav-link">About Us</a></li>
+        <li class="nav-list-item"><a href="" class="nav-link">Contacts</a></li>
+      </ul>
+    </nav>
+    <!-- Table -->
+    <section class="table-box">
+      <div class="table-container container-fluid">
+        <table class="table">
+          <thead>
+            <tr class="table-title title-list">
+              <th class="title-list__item">#</th>
+              <th class="title-list__item">Сongue quisque</th>
+              <th class="title-list__item">Cras sed</th>
+              <th class="title-list__item">Nisl vel pretium</th>
+            </tr>
+          </thead>
+          <tbody class="table-content">
+            <tr class="content-block">
+              <td class="content-block__index">1</td>
+              <td class="content-block__text">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Tristique sollicitudin nibh sit amet commodo nulla facilisi.</td>
+              <td class="content-block__cras">Diam ut venenatis tellus in metus vulputate eu scelerisque felis.</td>
+              <td class="content-block__link"><a href="#">Tempus egestas</a></td>
+            </tr>
+            <tr class="content-block">
+              <td class="content-block__index">2</td>
+              <td class="content-block__text">Diam ut venenatis tellus in metus vulputate eu scelerisque felis.</td>
+              <td class="content-block__cras">Lacus vel facilisis volutpat est velit egestas.</td>
+              <td class="content-block__link"><a href="#">Tempus egestas</a></td>
+            </tr>
+            <tr class="content-block">
+              <td class="content-block__index">3</td>
+              <td class="content-block__text">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Tristique sollicitudin nibh sit amet commodo nulla facilisi.</td>
+              <td class="content-block__cras">Diam ut venenatis tellus in metus vulputate eu scelerisque felis.</td>
+              <td class="content-block__link"><a href="#">Tempus egestas</a></td>
+            </tr>
+            <tr class="content-block">
+              <td class="content-block__index">4</td>
+              <td class="content-block__text">Id donec ultrices tincidunt arcu non sodales neque.</td>
+              <td class="content-block__cras">Lacus vel facilisis volutpat est velit egestas.</td>
+              <td class="content-block__link"><a href="#">Tempus egestas</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- Dino -->
     <section class="dino" id="dino">
       <div class="dino-container container-fluid">
         <h1>Dino</h1>
@@ -53,6 +87,7 @@
         </div>
       </div>
     </section>
+    <!-- MobileDropDown -->
     <section class="DropDownMobileMenu" id="DropDownMobileMenu">
       <div class="DropDownMobileMenu-container container-fluid">
         <h1>Drop Down Mobile Menu</h1>
@@ -123,6 +158,7 @@
         </nav>
       </div>
     </section>
+    <!-- DesktopDropDown -->
     <section class="DropDownMenu" id="DropDownMenu">
       <div class="DropDownMenu-container container-fluid">
         <h1>Drop Down Menu</h1>
@@ -313,6 +349,7 @@
         </div>
       </div>
     </section>
+    <!-- DrugNDrop -->
     <section class="DrugnDrop" id="DrugnDrop">
       <div class="DrugnDrop-container container-fluid">
         <div class="block-from">
@@ -324,7 +361,6 @@
         <div class="block-into"></div>
       </div>
     </section>
-<!-- слик слайдер юниновы -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>

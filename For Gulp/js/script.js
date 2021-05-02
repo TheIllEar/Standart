@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   // SMOOTH SCROLL можно переделать на манер, кк написано на листке HTMLAcademy
 
+  // SideMobileMenu /////////////////////////////////////////////////////
+  const toggleButton = document.querySelector('.toggle-menu');
+  const navBar = document.querySelector('.nav-bar');
+  toggleButton.addEventListener('click', () => {
+    navBar.classList.toggle('toggle');
+  });
 
   // DINO /////////////////////////////////////////////////////
   const dinosaur = document.querySelector('.dino-box__dinosaur');
@@ -141,21 +147,19 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   // MEDIA /////////////////////////////////////////////////////
-  const mediaQuery = window.matchMedia('(max-width: 768px)') // Создаем медиа условие, проверяющее viewports на ширину не менее 768 пикселей.
-  if (mediaQuery.matches) { //.matches подходит только для одноразовых проверок, но оно не может постоянно проверять наличие изменений окна браузера
-    console.log('Media Query Matched!')
-  } else {
-
-  }
-
-
-  const handleTabletChange = (evt) => {
-    if (evt.matches) {
-      blockFrom.style.display = 'none';
+  const handleTabletChange = (e) => {
+    if (e.matches) {
+      console.log('Media Query Matched!')
     } else {
-      blockFrom.style.display = '';
+
     }
   }
+
+  const mediaQuery = window.matchMedia('(max-width: 767px)') // Создаем медиа условие, проверяющее viewports на ширину не менее 767 пикселей.
+  //.matches подходит только для одноразовых проверок, но оно не может постоянно проверять наличие изменений окна браузера
+  // if (mediaQuery.matches) { 
+  //   console.log('Media Query Matched!')
+  // }
 
   handleTabletChange(mediaQuery)
   mediaQuery.addListener(handleTabletChange) //метод, «включающий» прослушку на изменение ширины экрана

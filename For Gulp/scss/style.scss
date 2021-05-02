@@ -1,8 +1,19 @@
+@import 'variables';
+
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
+}
+
+ul, li, p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+a:focus,
+button:focus {
+  outline: inherit;
 }
 
 @font-face {
@@ -18,20 +29,17 @@
   font-style: normal;
 }
 
+html {
+  font-size: 10px;
+  height: 100%;
+}
+
 body {
   font-family: 'PreferredName', 'Roboto', sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-a:focus,
-button:focus {
-  outline: none;
+  font-size: 16px;
+  height: 100%;
 }
 
 .container-fluid {
@@ -41,7 +49,157 @@ button:focus {
   padding: 0 10px;
 }
 
-// DINO ////////////////////////////////////////////////////////
+// SideMobileMenu
+// Добавить затемнение фона при открытии меню
+// Запретить нажатие на элементы
+// Закрывать меню при нажатии на фон
+.nav-bar {
+	position: fixed;
+	background-color: $colorAccent;
+	top: 0;
+  left: -250px;
+	right: 100%;
+	height: 100vh;
+	width: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s;
+}
+
+.toggle {
+	left: 0;
+	box-shadow: 1px 0 15px 2px rgba(0, 0, 0, 0.4);
+  &-menu {
+    background-color: $colorAccent;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    .line {
+      width: 100%;
+      height: 3px;
+      border-radius: 5px;
+      background-color: $colorWhite;
+      transition: transform 0.2s ease-out;
+    }
+  }
+  .line1 {
+    background-color: #000;
+    transform: scale(0.9) rotateZ(-45deg) translate(-6px, 4px);
+  }
+   .line2 {
+    display: none;
+  }
+   .line3 {
+    background-color: $colorPrimary;
+    transform: scale(0.9) rotateZ(45deg) translate(-6px, -4px);
+  } 
+}
+
+.nav-link {
+	color: $colorWhite;
+	font-size: 22px;
+	position: relative;
+	padding-bottom: 4px;
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $colorWhite;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+    transform-origin: left;
+  }
+  &:hover::before {
+    transform: scaleX(1);
+  }
+  &:hover {
+    color: $colorWhite;
+  }
+}
+
+.toggle .toggle-menu {
+  background-color: $colorWhite;
+}
+.nav-list-item {
+text-align: center;
+padding: 10px 0;
+}
+
+//TABLE
+.table-box {
+  overflow-y: scroll;
+  .table {
+    &-title {
+      background-color: #d1d1d1;
+      &__item {
+        text-align: left;
+        padding: 10px;
+      }
+      &__item:first-child {
+        text-align: center;
+      }
+    }
+    @media (max-width: 970px) {
+      width: 1000px;
+    }
+    margin-top: 70px;
+    overflow-y: scroll;
+    .content-block:nth-child(even) {
+      background-color: #d1d1d1;
+    }
+    .content-block {
+      &__index {
+        font-size: 18px;
+        font-weight: bold;
+        padding-top: 10px;
+        width: 40px;
+        text-align: center;
+        vertical-align: top;
+      }
+      &__text {
+        width: 40%;
+        padding: 10px;
+        vertical-align: top;
+        color: #000;
+      }
+      &__cras {
+        width: 45%;
+        padding: 10px;
+        vertical-align: top;
+        color: #000;
+      }
+      &__link {
+        width: 15%;
+        padding: 10px;
+        vertical-align: top;
+        a {
+          color: #3abcb0;
+          text-decoration: underline;
+          transition: 0.3s;
+          &:hover,
+          &focus {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//DINO////////////////////////////////////////////////////////
 .dino-box {
   width: 100%;
   height: 400px;
@@ -98,7 +256,7 @@ button:focus {
   }
 }
 
-// DropDownMobileMenu /////////////////////////////////////////////////////
+//MobileDropDownMenu/////////////////////////////////////////////////////
 .DropDownMobileMenu {
   position: relative;
   height: 700px;
@@ -202,7 +360,7 @@ button:focus {
   }
 }
 
-// DropDownMenu /////////////////////////////////////////////////////
+//DesktopDropDownMenu/////////////////////////////////////////////////////
 .DropDownMenu {
   height: 700px;
 }
@@ -316,7 +474,7 @@ button:focus {
   visibility: visible;
 }
 
-//DrugnDrop /////////////////////////////////////////////////////
+//DrugnDrop/////////////////////////////////////////////////////
 .DrugnDrop {
   &-container {
     .block-from,
@@ -340,6 +498,12 @@ button:focus {
 }
 
 ////////////////////////////////////////////////////////////////////////////
+// Адаптивный шрифт (Максимальньй и минимальный размер шрифта)
+// @include fontSize(40, 20);
+
+//Точки для адаптива
+// @include breakpoint(lg) {
+// };
 
 //При тупняке с flex элементами/////////////
 // на родителя:
